@@ -7,6 +7,7 @@ export interface TodoState{
     limit: number// ко-во товара которое отображаю на одной странице
 }
 
+//перечисление для типов экшена
 export enum TodoActionTypes{
     FETCH_TODO = 'FETCH_TODO',
     FETCH_TODO_SUCCESS = 'FETCH_TODO_SUCCESS',

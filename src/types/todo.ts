@@ -15,8 +15,10 @@ export enum TodoActionTypes{
     SET_TODO_PAGE = 'SET_TODO_PAGE' // постраничный вывод для изменения текущей страницы
 }
 
+
+//для каждого экшена создаю по интерфейсу который описывает поля которые у экшена будут 
 interface FetchTodoAction{
-    type: TodoActionTypes.FETCH_TODO
+    type: TodoActionTypes.FETCH_TODO // поле type которое получаю из перечисления и он равен  FETCH_TODO
 }
 interface FetchTodoSuccessAction{
     type: TodoActionTypes.FETCH_TODO_SUCCESS,

@@ -1,11 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
-
+import { useTypedSelector } from './hooks/useTypedSelector';
 
 
 const UserList: React.FC = () => {
-    const  {users,error,loading} = useTypedSelector(state => state.user) // данные из состояния могу методом useSelector
+    const  {users,error,loading} = useTypedSelector(state => state.user) // данные из состояния могу методом useSelector получилась деструктуризация
     const {fetchUsers} = useActions();
     useEffect(() => {
         fetchUsers()

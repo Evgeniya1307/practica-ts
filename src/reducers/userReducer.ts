@@ -1,3 +1,5 @@
+import { UserState, UserActions, UserActionTypes } from "../types/todo"
+
 // тип моего состояния
 const initialState: UserState = {
     users:[], // список пользователей
@@ -40,4 +42,4 @@ export const userReducer = (state=initialState, action:UserActions): UserState =
 
 
 
-export type UserActions = FetchUsersAction | FetchUsersSuccessAction | FetchUsersErrorAction
+

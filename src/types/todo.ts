@@ -33,5 +33,5 @@ interface SetTodoPageAction{
     payload: number
 }
 
-
+//отдельный тип  TodoActions он связующее звено для всех типов экшена которые описала выше
 export type TodoActions = FetchTodoAction | FetchTodoSuccessAction | FetchTodoErrorAction | SetTodoPageAction

@@ -1,6 +1,6 @@
 import axios from "axios"
 import { Dispatch } from "redux"
-import { UserActions, UserActionTypes } from "../../types/todo"
+import { UserActions, UserActionTypes } from "../../types/user"
 
 // находятся экшенкрейтары которые связаны конткретно с пользователями
 export const fetchUsers = ():any => async  (dispatch: Dispatch<UserActions>) => { //параметром принимает диспатч и внутри делаю запрос на сервер 
@@ -9,7 +9,7 @@ export const fetchUsers = ():any => async  (dispatch: Dispatch<UserActions>) => 
         const response = await axios.get('https://jsonplaceholder.typicode.com/users')
 
         setTimeout(() => {
-            dispatch({type: UserActionTypes.FETCH_USERS_SUCCESS, payload: response.data})
+            dispatch({type: UserActionTypes.FETCH_USERS_SUCCESS, payload: response.data})//payload: response.data передаю те данные которые получили в теле ответа от сервера 
         }, 500)
 
     } catch (error) { // если возникла ошибка я передала FETCH_USERS_ERROR

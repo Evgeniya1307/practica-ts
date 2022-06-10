@@ -22,7 +22,7 @@ interface FetchTodoAction{
 }
 interface FetchTodoSuccessAction{
     type: TodoActionTypes.FETCH_TODO_SUCCESS,
-    payload: Array<any>
+    payload: Array<any> // массив указала как эни т,е объекты в этом массиве могут быть любого типа 
 }
 interface FetchTodoErrorAction{
     type: TodoActionTypes.FETCH_TODO_ERROR,

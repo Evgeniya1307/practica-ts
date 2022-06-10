@@ -1,7 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 
-const UserList: FC = () => {
+
+const UserList: React.FC = () => {
     const  {users,error,loading} = useTypedSelector(state => state.user) // данные из состояния могу методом useSelector
     const {fetchUsers} = useActions();
     useEffect(() => {

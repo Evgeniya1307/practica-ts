@@ -1,7 +1,7 @@
 
 import { TypedUseSelectorHook, useSelector } from "react-redux";
-import { RootState } from "../../reducers";
+import { RootState } from "../../reducers/index";
 
 
 // тот же самый useSelector только работающий с типами 
-export const useTypedSelector: TypedUseSelectorHook<typeof RootState> = useSelector;
+export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;

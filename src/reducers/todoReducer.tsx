@@ -1,13 +1,14 @@
-import { TodoState, TodoActions, TodoActionTypes } from '../types/user'
+import { TodoState, TodoActions, TodoActionTypes } from '../types/todo'
 
-todos: [],
+const initialState:TodoState = {
+    todos: [],
     loading: false,
     error: null,
     page: 1,
     limit: 7
 }
 
-const initialState:TodoState = {export const todoReducer = (state = initialState, action: TodoActions): TodoState => {
+export const todoReducer = (state = initialState, action: TodoActions): TodoState => {
     switch (action.type) {
         case TodoActionTypes.FETCH_TODO: 
             return {...state, loading: true}
